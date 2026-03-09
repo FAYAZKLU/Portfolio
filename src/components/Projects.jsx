@@ -47,6 +47,15 @@ const Projects = () => {
       tech: ['HTML', 'CSS', 'Javascript'],
       demo: 'https://tic-tac-toe-game-weld-delta.vercel.app/',
     },
+
+     {
+      title: 'Calculator App',
+      description:
+        'Responsive Calculator Web App with basic arithmetic operations and advanced functions like square, square root, factorial, and backspace with both button and keyboard input support for faster calculations.',
+      image: '/assets/projects/calci.png',
+      tech: ['HTML', 'CSS', 'Javascript'],
+      demo: 'https://calculator-app-lovat-xi.vercel.app/',
+    },
     {
       title: 'Automated Job Search Agent',
       description:

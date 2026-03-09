@@ -21,8 +21,7 @@ const Footer = () => {
               <div className="flex gap-4">
                 <a href="https://github.com/FAYAZKLU" target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-sage transition-colors hover:-translate-y-1 transform duration-300"><Github size={24} /></a>
                 <a href="https://www.linkedin.com/in/k-fayaz-101007343/" target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-sage transition-colors hover:-translate-y-1 transform duration-300"><Linkedin size={24} /></a>
-                <a href="https://leetcode.com/u/Klu2300032982/" target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-sage transition-colors hover:-translate-y-1 transform duration-300"><ExternalLink size={24} /></a>
-              </div>
+                   </div>
             </div>
 
             <div>
@@ -40,7 +39,7 @@ const Footer = () => {
               <h4 className="font-bold mb-4 text-lg">Get In Touch</h4>
               <p className="text-white/70 mb-2">Vijayawada, Andhra Pradesh</p>
               <p className="text-white/70 mb-4">India</p>
-              <a href="mailto:contact@katikafayaz.dev" className="text-sage hover:text-white transition-colors">contact@katikafayaz.dev</a>
+              <a href="mailto:contact@katikafayaz.dev" className="text-sage hover:text-white transition-colors">katikafayaz.ai@gmail.com</a>
             </div>
           </div>
 

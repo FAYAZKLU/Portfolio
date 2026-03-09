@@ -7,6 +7,7 @@ import { Label } from './ui/label';
 import { Mail, Linkedin, Github, ExternalLink, Send, MapPin } from 'lucide-react';
 import { toast } from '../hooks/use-toast';
 import { motion } from 'framer-motion';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
@@ -14,15 +15,41 @@ const Contact = () => {
 
   const handleChange = (e) => setFormData({ ...formData, [e.target.name]: e.target.value });
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    setTimeout(() => {
-      toast({ title: 'Message Sent!', description: "Thank you for reaching out. I'll get back to you soon!" });
-      setFormData({ name: '', email: '', message: '' });
-      setIsSubmitting(false);
-    }, 1000);
+
+const handleSubmit = async (e) => {
+  e.preventDefault();
+  setIsSubmitting(true);
+
+  const templateParams = {
+    name: formData.name,
+    email: formData.email,
+    message: formData.message
   };
+
+  try {
+    await emailjs.send(
+      "service_bosowfs",
+      "template_ww1qitb",
+      templateParams,
+      "RyaFcrjfpDk10YtwC"
+    );
+
+    toast({
+      title: "Message Sent!",
+      description: "Thank you for reaching out. I'll get back to you soon!"
+    });
+
+    setFormData({ name: "", email: "", message: "" });
+
+  } catch (error) {
+    toast({
+      title: "Error",
+      description: "Something went wrong. Please try again."
+    });
+  }
+
+  setIsSubmitting(false);
+};
 
   return (
     <motion.section
@@ -69,7 +96,7 @@ const Contact = () => {
                   <div className="bg-sage/10 p-3 rounded-lg"><Mail className="text-sage" size={24} /></div>
                   <div>
                     <h4 className="font-semibold text-forest mb-1">Email</h4>
-                    <a href="mailto:contact@katikafayaz.dev" className="text-sage hover:text-forest transition-colors">contact@katikafayaz.dev</a>
+                    <a href="mailto:contact@katikafayaz.dev" className="text-sage hover:text-forest transition-colors">katikafayaz.ai@gmail.com</a>
                   </div>
                 </div>
               </Card>

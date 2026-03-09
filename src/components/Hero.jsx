@@ -121,7 +121,7 @@ const Hero = () => {
 
       {/* STATS */}
       <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-        <Stat value="5+" label="Projects" />
+        <Stat value="7+" label="Projects" />
         <Stat value="5+" label="Certifications" />
         <Stat value="9.0+" label="CGPA" />
       </div>
