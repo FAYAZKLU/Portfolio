@@ -37,6 +37,11 @@ const Certifications = () => {
     certificate: "/assets/certifications/tcs.png"
   },
   {
+    title: "LinguaSkill English Proficiency Test",
+    provider: "Cambridge English",
+    certificate: "/assets/certifications/lin.png"
+  },
+  {
     title: "Software Engineering Job Simulation",
     provider: "JPMorgan Chase & Co. - Forage",
     certificate: "/assets/certifications/jp.png"
